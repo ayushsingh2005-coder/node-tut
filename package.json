@@ -4,7 +4,8 @@
   "description": "",
   "main": "alternative-flavour.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,8 @@
     "bootstrap": "^5.3.6",
     "lodash": "^4.17.21",
     "node": "file:"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
