@@ -107,3 +107,13 @@ console.log(newItems);
 // Numbers
 // Collections
 // And more...
+
+// package.json is the metadata file that sits at the root of any Node.js project. It tells:
+
+// what your project is,
+
+// which packages it uses,
+
+// how to run it,
+
+// and more.
