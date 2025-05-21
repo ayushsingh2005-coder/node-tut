@@ -103,7 +103,7 @@ console.log(newItems);
 
 // Arrays
 // Objects
-// Strings
+// Strings 
 // Numbers
 // Collections
 // And more...
