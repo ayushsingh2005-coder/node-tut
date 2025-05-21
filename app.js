@@ -85,6 +85,7 @@
 // global dependency - use it in any project
 // npm install -g <packageName> (windows)
 
+// -------package.json ------------
 // package.json - manifest file(stores important info about project/package)'
 // manual approach(created package.json in the roots,create properties etc)
 // npm init (step by step , press enter to skip)
