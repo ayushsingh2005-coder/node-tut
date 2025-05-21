@@ -115,5 +115,3 @@ console.log(newItems);
 // which packages it uses,
 
 // how to run it,
-
-// and more.
