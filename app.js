@@ -255,3 +255,32 @@
 // }
 
 // start()
+
+// -----------------------------------
+
+// 🔸🔸🔸 EVENTS 🔸🔸🔸🔸
+
+// In browser-based JavaScript applications, a major part of your code responds to user actions — like:
+
+// Clicking a button
+// Hovering over a link
+// Typing in a form
+
+// These actions are called events.
+
+//🔸Event-driven programming is a style where parts of your code run in response to events, rather than in a strict top-down order.
+// used heavily in node.js
+
+// listen for specific events and register functions that will execute in response to those events so our events will take place callback function fires.
+
+//🔸setuping up our own events
+
+//🔸EventEmitter is a class in Node.js it allows us to create, listen for, and handle custom events .
+
+const EventEmitter = require('events');
+
+
+
+
+
+
