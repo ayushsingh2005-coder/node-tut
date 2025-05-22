@@ -92,12 +92,12 @@
 // npm init -y (everything default)
 
 
-const _ = require('lodash');
-const { EventEmitter } = require('stream');
+// const _ = require('lodash');
+// const { EventEmitter } = require('stream');
 
-const items = [1,[2,[3,[4]]]]
-const newItems = _.flattenDeep(items);
-console.log(newItems);
+// const items = [1,[2,[3,[4]]]]
+// const newItems = _.flattenDeep(items);
+// console.log(newItems);
 
 //  _ (which is a common naming convention).
 
@@ -147,3 +147,57 @@ console.log(newItems);
 //🧠Node.js is single-threaded at the JavaScript level but multi-threaded underneath.
 // ----------------------------------
 
+
+// --- Manual approach ------
+
+const {readFile} = require('fs');
+
+// This is a function that wraps readFile inside a Promise so that it can be used with async/await.
+
+const getText = (path) => {
+    return new Promise ((resolve,reject) =>{
+    readFile(path,'utf-8' ,(err,data)=>{
+    if(err){
+       reject(err)
+    }
+    else{
+       resolve(data);
+        
+    }
+})
+    })
+}
+
+
+const start = async () =>{
+    try {
+        const first = await getText('./content/first.txt');
+        console.log(first); 
+    } catch (error) {
+        console.log(error);
+        
+    }  
+}
+
+start()
+
+
+// getText('./content/first.txt')
+// .then(result => console.log(result))
+// .catch((err) => console.log(err))
+
+
+//-------- automated method -------
+
+// const { readFile } = require('fs/promises');
+
+// const start = async () => {
+//     try {
+//         const data = await readFile('./content/first.txt', 'utf-8');
+//         console.log(data);
+//     } catch (err) {
+//         console.error(err);
+//     }
+// };
+
+// start();
