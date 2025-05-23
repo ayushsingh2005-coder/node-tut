@@ -1,21 +1,15 @@
-// get back the class
-// if want custom extend from class
-// otherwise just for emitting and handling events create instance
-const EventEmitter = require('events')
+const http = require('http')
 
-const customEmitter = new EventEmitter()
+// const server = http.createServer((req, res) => {
+//   res.end('Welcome')
+// })
 
-// on and emit methods
-// keep track of the order
-// additional arguments
-// built-in modules utilize it
-
-customEmitter.on('response', (name, id) => {
-  console.log(`data recieved user ${name} with id:${id}`)
+// Using Event Emitter API
+const server = http.createServer()
+// emits request event
+// subcribe to it / listen for it / respond to it
+server.on('request', (req, res) => {
+  res.end('Welcome')
 })
 
-customEmitter.on('response', () => {
-  console.log('some other logic here')
-})
-
-customEmitter.emit('response', 'john', 34)
+server.listen(5000)
