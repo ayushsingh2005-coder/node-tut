@@ -320,7 +320,6 @@ customEmitter.emit('res',"cena",1)
 
 
 
-
 //🎯IMPORTANT POINTS -----------------
 
 //🎯objectname.method(event name) 
@@ -333,7 +332,7 @@ customEmitter.emit('res',"cena",1)
 //📌M2 : .emit(eventName, arg1, arg2, ...)
 // Emits (triggers)  the event, passing optional data to the listener.
 
-//📌WE Can have as many functions as many functions we would want here that will listen for an event and do some other logic for this event
+//📌WE Can have as many functions as we would want here that will listen for an event and do some other logic for this event
 
 //📌 ORDER MATTERS : first listen ---> then emit (trigger)
 
