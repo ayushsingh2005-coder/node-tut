@@ -42,3 +42,34 @@
 // const stream = createReadStream('./content/big.txt', {enoding : 'utf-8'})
 
 // =======================================
+
+// HANDLING USER REQUEST AND SENDIND THE DATA IN CHUNKS ALONG WITH READING IN CHUNKS 
+
+var http = require('http')   // Step 1: Load HTTP module
+var fs = require('fs')       // Step 2: Load File System module
+
+// Step 3: Create the server
+http.createServer(function(req, res) {
+
+    // Step 4: Open a file stream to read the big.txt file
+    const fileStream = fs.createReadStream('./content/big.txt', 'utf-8');
+
+    // Step 5: When the file is ready to read
+    fileStream.on('open', () => {
+        // Send the file piece-by-piece to the person who made the request
+        fileStream.pipe(res)
+    });
+
+    // Step 6: If there's an error (like file not found)
+    fileStream.on('error', (err) => {
+        res.statusCode = 500; // Server error
+        res.end(`Error reading file: ${err.message}`);
+    });
+
+})
+.listen(5000, () => {
+    // Step 7: Show a message that the server is running
+    console.log('Server running at http://localhost:5000/');
+});
+
+// .pipe() connects two streams — it reads from one and writes to another, chunk by chunk, efficiently.
