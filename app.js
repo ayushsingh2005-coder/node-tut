@@ -1,69 +1,4 @@
-//🔶GLOBALS - NO WINDOW !!!!🔶
 
-// __dirname  - path to current directory
-// __filename - filename
-// require(parameter)    - function to use modules (Common JS)
-// module     - info about current module(file)
-// process    - info about env(environment) where the program is being executed.
-
-// Note :there are more globles variable
-// =============================
-
-
-// console.log(__dirname);
-// setInterval(() => {
-//     console.log(`hello world`);
-// },1000).
-
-// ===========================
-// 🔶 MODULES 🔶
-
-// CommonJs,in node every file is module(by default)
-// encapsulated code (only share minimum)
-
-// const secret = 'SUPER SECRET'
-// const john ="john"
-// const peter = 'peter'
-
-// const sayHi = (name) =>{
-//     console.log(`hello there ${name}`);
-// }
-
-// 🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸
-
-// const names = require('./Names');
-// console.log(names);
-
-// const sayHi= require('./utils');
-// console.log(func);
-
-// const data = require('./alternative-flavour');
-// console.log(data);
-
-//🔸use the below code when you export the function as function
-// sayHi(`susan`);
-// sayHi(names.john);
-// sayHi(names.peter);
-
-//🔸use this when we have exported the function as an object
-// sayHi.sayHi('susan');
-// sayHi.sayHi(names.john);
-// sayHi.sayHi(names.peter);
-
-//🔸we can also use destructing to do the above task
-
-// -------------------------------
-// mind-greanade file content here .
-// if we have a function inside module that we invoke ,the code will run even though we didn't assign it to variable .
-// require('./mind-grenade'); //result =15
-
-// ===============================
-
-// Built-in Modules 🔶
-// 1.OS ---->os-module.js
-// 2.PATH 
-// 3.FS
-// 4.HTTP
 
 
 //NPM(Node Package Manager)
@@ -299,43 +234,6 @@
 
 // --------------------------------
 
-
-const http = require('http')
-
-// const server = http.createServer((req, res) => {
-//   res.end('Welcome')
-// })
-
-// Using Event Emitter API
-const server = http.createServer()
-// emits request event
-// subcribe to it / listen for it / respond to it
-server.on('request', (req, res) => {
-  res.end('Welcome')
-})
-
-server.listen(5000)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //🎯IMPORTANT POINTS -----------------
 
 //🎯objectname.method(event name) 
@@ -361,3 +259,12 @@ server.listen(5000)
 // A register function is a function used to register a listener — meaning you're telling the program:
 // "Hey, when this event happens, run this function."
 //📌.on() method is the register function.
+
+
+// --------------------------------------
+
+// for reading and writing bigger files(in size) we use streams
+
+const {createReadStream} =require('fs')
+
+const stream = createReadStream('./content/big.txt');
