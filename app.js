@@ -276,29 +276,45 @@
 //🔸setuping up our own events-------
 
 //🔸EventEmitter is a class in Node.js it allows us to create, listen for, and handle custom events .
+
 // we have two options :
 //  if we wanna create something custom ,we need to extend this class.
 // if we want to emit an event as well as listen for it ,then we can create an instance .
 // -----------------------------------
-const EventEmitter = require('events');
+// const EventEmitter = require('events');
 // ----------------------------------
 // Create an instance (object)(BASIC SETUP)
-const customEmitter = new EventEmitter();
+// const customEmitter = new EventEmitter();
 
 
-customEmitter.on('response',(name,id)=>{
-    console.log(`data recieved ${id} ${name}`);   
-})
-customEmitter.on('res',(name,id)=>{
-    console.log(`some other name here ${name} ${id} `);   
-})
+// customEmitter.on('response',(name,id)=>{
+//     console.log(`data recieved ${id} ${name}`);   
+// })
+// customEmitter.on('res',(name,id)=>{
+//     console.log(`some other name here ${name} ${id} `);   
+// })
 
-customEmitter.emit('response',"John",1)
-customEmitter.emit('res',"cena",1)
-
+// customEmitter.emit('response',"John",1)
+// customEmitter.emit('res',"cena",1)
 
 // --------------------------------
 
+
+const http = require('http')
+
+// const server = http.createServer((req, res) => {
+//   res.end('Welcome')
+// })
+
+// Using Event Emitter API
+const server = http.createServer()
+// emits request event
+// subcribe to it / listen for it / respond to it
+server.on('request', (req, res) => {
+  res.end('Welcome')
+})
+
+server.listen(5000)
 
 
 
