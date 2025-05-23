@@ -4,13 +4,13 @@
 
 // TYPES OF STREAMS ---------
 
-//🔸.Writeable - used to write data sequentially.
+//🔸Writeable - used to write data sequentially.
 
-//🔸.Readable - used to read data sequentially.
+//🔸Readable - used to read data sequentially.
 
-//🔸.Duplex - used to both read and write data sequentially.
+//🔸Duplex - used to both read and write data sequentially.
 
-//🔸.Transform - data can be modified when writing or reading.
+//🔸Transform - data can be modified when writing or reading.
 
 // stream extend event emitter class :
 // which simply means that we can use events like data and on streams
