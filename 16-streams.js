@@ -15,3 +15,30 @@
 // stream extend event emitter class :
 // which simply means that we can use events like data and on streams
 
+// ========================================
+
+// for reading and writing bigger files(in size) we use streams
+
+// code start ------------------------------
+
+// const {createReadStream} = require('fs')
+
+// const stream = createReadStream('./content/big.txt');
+
+
+// stream.on('data',(result)=>{
+//     console.log(result);   
+// })
+// stream.on('error' ,(err)=>{console.log(err);
+// } )
+
+// code end--------------------------
+
+// dafault  = 64kb  (size of buffer)
+// last buffer - remainder
+
+// highWaterMark = control size
+// const stream = createReadStrem('./content/big.txt',{highWaterMark : 90000})
+// const stream = createReadStream('./content/big.txt', {enoding : 'utf-8'})
+
+// =======================================

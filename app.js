@@ -260,30 +260,12 @@
 // "Hey, when this event happens, run this function."
 //📌.on() method is the register function.
 
-
-
-// for reading and writing bigger files(in size) we use streams
-
-// code start ------------------------------
-
-// const {createReadStream} = require('fs')
-
-// const stream = createReadStream('./content/big.txt');
-
-
-// stream.on('data',(result)=>{
-//     console.log(result);   
-// })
-// stream.on('error' ,(err)=>{console.log(err);
-// } )
-
-// code end--------------------------
-
-// dafault  = 64kb  (size of buffer)
-// last buffer - remainder
-
-// highWaterMark = control size
-// const stream = createReadStrem('./content/big.txt',{highWaterMark : 90000})
-// const stream = createReadStream('./content/big.txt', {enoding : 'utf-8'})
-
 // ========================================
+
+var http = require('http')
+var fs = require('fs')
+
+http.createServer(function(req,res){
+    const text = fs.readFileSync('./content.big.txt','utf-8')
+    res.end(text)
+}).listen(4000)
