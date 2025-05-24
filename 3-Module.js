@@ -47,18 +47,3 @@
 // 2.PATH 
 // 3.FS
 // 4.HTTP
-
-
-const names = require('./4-Names');
-// console.log(names);
-
-const sayHi= require('./5-utils');
-// console.log(func);
-
-const data = require('./6-alternative-flavour');
-
-require('./7-mind-grenade')
-
-sayHi(`susan`);
-sayHi(names.john);
-sayHi(names.peter);
