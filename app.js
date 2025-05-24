@@ -193,7 +193,7 @@
 
 // -----------------------------------
 
-// 🔸🔸🔸 EVENTS 🔸🔸🔸🔸
+//🔸🔸🔸🔸 EVENTS 🔸🔸🔸🔸
 
 // In browser-based JavaScript applications, a major part of our code responds to user actions — like:
 
@@ -261,4 +261,5 @@
 //📌.on() method is the register function.
 
 // ========================================
+
 
