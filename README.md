@@ -1,3 +1,5 @@
+
+app.js is the main file where you can put all the code from any of the file and then write nodemon app.js in your code editor terminal to run the server 
 Overview
 
 This Repo provides a comprehensive introduction to Node.js, a JavaScript runtime for building server-side applications. It covers fundamental concepts, built-in modules, asynchronous patterns, event-driven programming, and practical examples like handling HTTP requests and streams.
