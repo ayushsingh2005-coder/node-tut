@@ -19,3 +19,13 @@ customEmitter.on('response', () => {
 })
 
 customEmitter.emit('response', 'john', 34)
+
+// NOTE :
+// Node.js provides a built-in module called events.
+// EventEmitter is a class inside this module that allows you to create and handle custom events.
+
+// .emit(eventName, arg1, arg2, ...) triggers the 'response' event.
+// All the listeners for that event will be executed in order.
+// Arguments ('john', 34) are passed to the listeners — similar to function parameters.
+
+// You can attach many listeners to the same event.
