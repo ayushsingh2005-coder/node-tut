@@ -30,7 +30,7 @@ HTTP Intro: Introduction to the HTTP module.
 HTTP Module (Setup): Creating a basic HTTP server.
 HTTP Module (More Features): Adding features like routing and file streaming.
 
-4. Package Management with NPM
+4. Package Management with NPM(in app.js)
 NPM Info: What is NPM and how it works.
 NPM Command: Common NPM commands (install, init, etc.).
 First Package: Installing and using your first NPM package.

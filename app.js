@@ -5,7 +5,7 @@
 
 // npm enables us to do three things:
 // 1.reuse our own code in other project
-// 2.use code wrutten by other developers
+// 2.use code written by other developers
 // 3.share our own solutions with other developers
 
 // Note:
