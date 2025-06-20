@@ -1,4 +1,5 @@
-// 1.EVENT LOOP 
+// 1.EVENT LOOP :
+//💡The Event Loop is a mechanism that lets Node.js handle many tasks at once — without waiting for each one to finish.
 
 // the event loop is what allows Node.js to perform non-blocking I/O operations -despite the fact that JS is single threaded - by offloading operations to the system kernel whenever possible 
 
